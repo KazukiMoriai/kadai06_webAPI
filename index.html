@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <!-- 最初の設定は終わっています　必要な方は触ってください -->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LoveYourCars-ChatBot</title>
+    <!-- google geminiをインポート   -->
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
+      }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="module" src="js/main.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      a {
+          color: inherit; /* 親要素の色を継承する */
+          text-decoration: none; /* 下線を消す */
+      }
+  </style>
+    <!-- サイト全体のフォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <!-- topのLoveYourCarsのフォント -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
+  </head>
+  <!-- 最初の設定は終わっています　必要な方は触ってください -->
+  <body>
+    <!-- ここから下にコードを書く -->
+    <div class="top">
+      <div class="t0"></div>
+      <div class="t1">
+        <span class="t11">
+          <span class="t111">=</span>
+          <span class="t112"><a href="index2.html"target="_blank" rel="noopener noreferrer">Buy</a></span>
+          <span class="t113"><a href="index3.html"target="_blank" rel="noopener noreferrer">Sell</a></span>
+          <span class="t114"><a href="index4.html"target="_blank" rel="noopener noreferrer">Review</a></span>
+        </span>
+        <span class="t12"><a href="index.html">LoveYourCars</a></span>
+        <span class="t13">
+          <span class="t131">Sing In</span>
+        </span>
+      </div>
+    
+          <!-- チャット -->
+      <div id="chatspace">
+        <div id="output"></div>
+        <div id="down">
+          <input type="text" id="input" placeholder="メッセージを入力…">
+          <button id="send">送信</button>
+        </div>
+      </div>
+    </div>
+    <!-- ここまでtop -->
+
+
+  </body>
+</html>

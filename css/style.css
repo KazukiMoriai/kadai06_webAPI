@@ -1,0 +1,197 @@
+/* ここから下に記載していく */
+*{
+    box-sizing: border-box;
+  }
+
+ /* body全体のフォント指定 */
+  body {
+    line-height: 1;
+    font-family: "Roboto", serif;
+}
+
+
+
+/* ここからtop */
+.top {
+    width: 100%;
+    height: 800px;
+    background-image: url("../img/1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+
+}
+
+.t0 {
+    /* background-color: rebeccapurple; */
+    height: 24px;
+}
+
+.t1 {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+    transition: 0.5s;
+}
+
+
+.t1:hover {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+    background-color: white;
+    color: black;
+    border-radius: 23px;
+    transition: 0.5s;
+}
+
+
+span.t11 {
+    display: flex;
+    justify-content: space-around;
+    width: 33%;
+    font-size: 20px;
+    margin: 0 0 0 30px;
+    padding-top: 21px;
+}
+
+span.t112 {
+    height: 34px;
+    width: 55px;
+    text-align: center;
+    border-radius: 15px;
+    padding-top: 6px;
+    cursor: pointer;
+    
+}
+   
+span.t112:hover {
+    height: 34px;
+    width: 55px;
+    text-align: center;
+    border-radius: 15px;
+    padding-top: 6px;
+    opacity: 0.6;
+}
+
+
+span.t113 {
+    height: 34px;
+    width: 55px;
+    text-align: center;
+    border-radius: 15px;
+    padding-top: 6px;
+    cursor: pointer;
+}
+   
+span.t113:hover {
+    height: 34px;
+    width: 55px;
+    text-align: center;
+    border-radius: 15px;
+    padding-top: 6px;
+    opacity: 0.6;
+}
+
+span.t114 {
+    height: 34px;
+    width: 114px;
+    text-align: center;
+    border-radius: 15px;
+    padding-top: 6px;
+    cursor: pointer;
+}
+   
+span.t114:hover {
+    height: 34px;
+    width: 114px;
+    text-align: center;
+    border-radius: 15px;
+    padding-top: 6px;
+    opacity: 0.6;
+}
+   
+
+
+span.t12 {
+    width: 33%;
+    font-size: 30px;
+    margin: 0  0;
+    padding-top: 18px;
+    text-align: center;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 600;
+}
+
+
+
+span.t13 {
+    width: 33%;
+    font-size: 17px;
+    margin: 0 30px 0 0px;
+    padding-top: 17px;
+    text-align: right;
+    display: flex;
+    justify-content: end;
+}
+
+span.t131 {
+    background-color: #ffac00;
+    border-radius: 20px;
+    display: block;
+    height: 38px;
+    width: 84px;
+    text-align: center;
+    margin: 0px 0px 0px 0px;
+    padding-top: 13px;
+    color: black;
+    font-size: 14px;
+    cursor: pointer;
+    
+}
+
+span.t131:hover {
+    opacity: 0.6;
+}
+
+div#chatspace {
+    height: auto;
+    width: 60%;
+    margin: 10px auto;
+    opacity: 0.9;
+}
+
+div#output {
+    height: 400px;
+    background-color: white;
+    width: 98%;
+    margin: 30px auto 0;
+    color: black;
+    border:1px solid #ccc;
+    overflow: auto;
+    border-radius: 20px 20px 0 0 ;
+}
+
+div#down {
+    height: 63px;
+    background-color: white;
+    width: 98%;
+    margin: 0 auto;
+    border-radius: 0 0 20px 20px;
+    border:1px solid #ccc;
+    border-radius: 0 0 20px 20px;
+
+}
+input#input {
+    height: 36px;
+    width: 80%;
+    font-size: 15px;
+    margin: 13px 7px;
+}
+button#send {
+}
