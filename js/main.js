@@ -17,32 +17,51 @@ async function initializeModel() {
 
 const modelPromise = initializeModel();
 
-// 送信ボタンクリック時のイベント処理
-function send() {
-  document.getElementById("send").addEventListener("click", async function() {
+// チャットの出力エリアを最下部にスクロールする関数
+function scrollToBottom() {
+    const outputContainer = document.getElementById("output");
+    outputContainer.scrollTop = outputContainer.scrollHeight;
+}
+
+// メッセージ送信処理
+async function handleSendMessage() {
     const userInput = document.getElementById("input").value.trim();
     if (!userInput) return;
-
-    document.getElementById("output").innerHTML += `<p><strong>あなた:</strong> ${userInput}</p>`;
-
+    //チャット入力後に最下部を表示
+    document.getElementById("output").innerHTML += `<p class="user-message">${userInput}</p>`;
+    scrollToBottom(); 
     try {
         const model = await modelPromise;
         if (!model) throw new Error("モデルが初期化されていません");
-
-        const chat = await model.startChat();  // ここで await を追加
+        const chat = await model.startChat();
         const result = await chat.sendMessage(userInput);
         const response = await result.response;
         const text = await response.text();
-
-        document.getElementById("output").innerHTML += `<p><strong>Gemini君:</strong> ${text}</p>`;
+        document.getElementById("output").innerHTML += `<p class="gemini-message"> ${text}</p>`;
         console.log(text);
+        // 最下層へスクロール
+        scrollToBottom(); 
     } catch (error) {
         console.error("エラーが発生しました:", error);
         document.getElementById("output").innerHTML += `<p><strong>エラー:</strong> 応答の取得に失敗しました。</p>`;
+        scrollToBottom(); 
     }
-
+    //入力欄をブランクへ
     document.getElementById("input").value = '';
-  });
-};
+}
+
+// クリックイベント
+function send() {
+    //送信ボタンをクリックして、送信処理
+    document.getElementById("send").addEventListener("click", handleSendMessage);
+    // Enterキー押下時
+    document.getElementById("input").addEventListener("keydown", function(event) {
+        if (event.keyCode === 13) {  
+            handleSendMessage();
+             // Enterキーによる改行を防止
+            event.preventDefault(); 
+        }
+    });
+}
 
 send();

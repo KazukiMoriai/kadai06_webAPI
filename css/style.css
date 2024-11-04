@@ -161,13 +161,13 @@ span.t131:hover {
 
 div#chatspace {
     height: auto;
-    width: 60%;
+    width: 300px;
     margin: 10px auto;
     opacity: 0.9;
 }
 
 div#output {
-    height: 400px;
+    height: 500px;
     background-color: white;
     width: 98%;
     margin: 30px auto 0;
@@ -193,5 +193,41 @@ input#input {
     font-size: 15px;
     margin: 13px 7px;
 }
+
 button#send {
+    height: 70%;
+    border-radius: 10px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    font-size: 14px;
+}
+
+/* ユーザー*/
+.user-message {
+    background-color: #d5f3a5;
+    padding: 8px;
+    border-radius: 8px;
+    margin: 10px 8px 5px 0;
+    text-align: left;
+    float: right;
+    border-radius: 30px 30px 0px 30px;
+    margin-left: 50px;
+    width: fit-content;
+    max-width: 80%;
+
+}
+
+/* Gemini*/
+.gemini-message {
+    background-color: #d5f3a5;
+    padding: 8px;
+    border-radius: 8px;
+    margin: 10px 0px 5px 8px;
+    text-align: left;
+    float: left;
+    border-radius: 30px 30px 30px 0px;
+    margin-right: 50px;
+    width: fit-content;
+    max-width: 80%;
 }
